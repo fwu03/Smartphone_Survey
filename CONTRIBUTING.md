@@ -103,5 +103,5 @@ Attribution of the Contributing file: [Software Carpentry CONTRIBUTING.md](https
 [github-flow]: https://guides.github.com/introduction/flow/
 [github-join]: https://github.com/join
 [how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[issues]: /issues
-[repo]: 
+[issues]: https://github.com/UBC-MDS/Survey_Laptop_Preference/issues
+[repo]: https://github.com/UBC-MDS/Survey_Laptop_Preference
