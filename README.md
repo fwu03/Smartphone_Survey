@@ -1,4 +1,4 @@
-# DSCI554_Survey_Project
+# DSCI554 Survey: Laptop Preference
 
 
 ## Contributors
