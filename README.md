@@ -1,2 +1,3 @@
-# DSCI554_Bailey_Fan_Makk
-The repo for DSCI554 survey project
+# DSCI554_Survey_Project
+DSCI554 survey repo for Fan, Bailey, and Makkaoui
+
