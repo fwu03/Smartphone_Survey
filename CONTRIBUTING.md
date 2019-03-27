@@ -1,10 +1,15 @@
 # Contributing
-[mlist][repo] is open source projects, and we welcome contributions of all kinds: new functions, fixes to existing material, bug reports, and reviews of proposed changes are all welcome.
+[This][repo] is open source projects, and we welcome contributions of all kinds: 
+
+- New functions
+- Fixes to existing material
+- Bug reports
+- Reviews of proposed changes are all welcome.
 
 ## Contributor Agreement
 
 By contributing,
-you agree that we may redistribute your work under [our license](LICENSE.md).
+you agree that we may redistribute your work under our license.
 In exchange,
 we will address your issues and/or assess your change proposal as promptly as we can,
 and help you become a member of our community.
@@ -98,5 +103,5 @@ Attribution of the Contributing file: [Software Carpentry CONTRIBUTING.md](https
 [github-flow]: https://guides.github.com/introduction/flow/
 [github-join]: https://github.com/join
 [how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
-[issues]: https://github.com/UBC-MDS/mlist_R/issues
-[repo]: https://github.com/UBC-MDS/mlist_R
+[issues]: /issues
+[repo]: 
