@@ -1,4 +1,4 @@
-# DSCI554 Survey: Laptop Preference
+# DSCI554 Survey: Smartphone
 
 
 ## Contributors
