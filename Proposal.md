@@ -18,7 +18,7 @@ Q1: What smartphone operating system/platform do you have?
 - iOS
 - Other
 
-> This question identify the independent variable in our analysis: Smartphone operating system
+> This question identifies the independent variable in our analysis: Smartphone operating system
 
 Q2: What is your level of satisfaction using your current phone?
 1 - 2 - 3 - 4 - 5
