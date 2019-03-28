@@ -1,11 +1,9 @@
 # Milestone 1: Proposal
 
 ### Research Question
-----
 The survey is designed to investigate a research question: Does the choice of phone of an individual influence their choice of laptop operating system?
 
 ### Survey Questions
-----
 Q0: Do you own a smartphone?
 - Yes
 - No
@@ -80,9 +78,7 @@ What type of phone do you have?
 > This question identify more details about the independent variable 
 
 ### Statistics Analysis
-----
 Describe the plan to analyze the survey results
 
 ### Online Surveys Ethics
-----
 Discuss the aspects of the UBC Office of Research Ethics document on Using Online Surveys that are relevant to the proposed survey.
