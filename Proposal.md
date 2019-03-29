@@ -136,6 +136,5 @@ E_ik: the expected count of the cell in the i row and the k column <br/>
 Data collected from the survey will be analyzed using R. A contingency table will be created, then follow by a chi-square test of independence.
 
 ### Online Surveys Ethics
-Discuss the aspects of the UBC Office of Research Ethics document on Using Online Surveys that are relevant to the proposed survey.
 
 Based on the UBC Office of Research Ethics document, all online survey data will be stored and accessed in Canada only. In addition, no private information, such as names, IP address, or any information that can indirectly identify someone, will be collected in the survey. Thus, a cover letter will be used instead of a full signed consent form.
