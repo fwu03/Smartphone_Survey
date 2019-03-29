@@ -84,11 +84,10 @@ A chi-square test of independence will be used to test for association between t
 
 ![alt text](chisq.PNG)
 
-where:
-r : number of rows.
-c : number of columns.
-O_ik : observed count of the cell in the i row and the k column.
-E_ik : the expected count of the cell in the i row and the k column.
+r: number of rows <br/>
+c: number of columns <br/>
+O_ik: observed count of the cell in the i row and the k column <br/>
+E_ik: the expected count of the cell in the i row and the k column <br/>
 
 Data collected from the survey will be analyzed using R. A contingency table will be created, then follow by a chi-square test of independence.
 
