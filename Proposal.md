@@ -64,7 +64,7 @@ Q7: What operating system is running on your PC
 - Windows
 - Other
 
-> This question identify the dependent variable in our analysis: Laptop operating system 
+> This question identify the dependent variable in our analysis: Laptop operating system
 
 Optional Questions:
 What type of phone do you have?
@@ -75,10 +75,24 @@ What type of phone do you have?
 - Huawei
 - Other: Please Enter
 
-> This question identify more details about the independent variable 
+> This question identify more details about the independent variable
 
 ### Statistics Analysis
 Describe the plan to analyze the survey results
 
+A chi-square test of independence will be used to test for association between the independent variable, choice of smartphone platform, and the dependent variable, choice of laptop platform. The null hypothesis is that the choices of laptop platform is independent of phone platform. The alternative hypothesis is that choices laptop platform is not independent of phone platform. The test statistic for the Chi-square test is denote by $chi^2$:
+$\[\tilde{\chi}^2=\sum_{i=1}^{r}\sum_{k=1}^{c} \frac{(O_{ik} - E_{ik})^2}{E_{ik}}\]$
+
+where:
+$r$ : number of rows.
+$c$ : number of columns.
+$O_{ik}$ : observed count of the cell in the $i$ row and the $k$ column.
+$E_{ik}$ : the expected count of the cell in the $i$ row and the $k$ column.
+
+Data collected from the survey will be analyzed using R. A contingency table will be created, then follow by a chi-square test of independence.
+
+
 ### Online Surveys Ethics
 Discuss the aspects of the UBC Office of Research Ethics document on Using Online Surveys that are relevant to the proposed survey.
+
+Based on the UBC Office of Research Ethics document, all online survey data will be stored and accessed only in Canada. In addition, no private information, such as names, IP address, or any information that can indirectly identify someone, will be collected in the survey. Thus, a cover letter will be used instead of a full signed consent form.
