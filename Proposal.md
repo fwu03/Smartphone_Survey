@@ -80,14 +80,15 @@ What type of phone do you have?
 ### Statistics Analysis
 Describe the plan to analyze the survey results
 
-A chi-square test of independence will be used to test for association between the independent variable, choice of smartphone platform, and the dependent variable, choice of laptop platform. The null hypothesis is that the choices of laptop platform is independent of phone platform. The alternative hypothesis is that choices laptop platform is not independent of phone platform. The test statistic for the Chi-square test is denote by $chi^2$:
-$\[\tilde{\chi}^2=\sum_{i=1}^{r}\sum_{k=1}^{c} \frac{(O_{ik} - E_{ik})^2}{E_{ik}}\]$
+A chi-square test of independence will be used to test for association between the independent variable, choice of smartphone platform, and the dependent variable, choice of laptop platform. The null hypothesis is that the choices of laptop platform is independent of phone platform. The alternative hypothesis is that choices laptop platform is not independent of phone platform. The test statistic for the Chi-square test is denote by:
+
+![alt text](chisq.PNG)
 
 where:
-$r$ : number of rows.
-$c$ : number of columns.
-$O_{ik}$ : observed count of the cell in the $i$ row and the $k$ column.
-$E_{ik}$ : the expected count of the cell in the $i$ row and the $k$ column.
+r : number of rows.
+c : number of columns.
+O_ik : observed count of the cell in the i row and the k column.
+E_ik : the expected count of the cell in the i row and the k column.
 
 Data collected from the survey will be analyzed using R. A contingency table will be created, then follow by a chi-square test of independence.
 
