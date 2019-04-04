@@ -8,3 +8,12 @@
 |Bailey Lei|[blei7](https://github.com/blei7)|
 |Makkaoui Mohamad|[makka3](https://github.com/makka3)|
 |Fan Wu |[fwu03](https://github.com/fwu03)|
+
+## Milestone
+|Milestone|Description|
+|--|--|
+|Milestone 1|[Proposal](../master/Proposal.md)|
+
+
+## Research Question
+The survey is designed to investigate the research question: **Does an individuals choice of smartphone (and thus smartphone operating system) influence their choice of personal computer (and thus operating system)?**
