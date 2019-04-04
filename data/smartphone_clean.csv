@@ -1,0 +1,28 @@
+smartphone_OS,num_smartphone_OS,smartphone_OS_years,pre_smartphone_OS,future_smartphone_OS,family_smartphone_OS,friend_smartphone_OS,PC_OS,num_PC_OS,PC_OS_years,future_PC_OS,workplace_PC_OS
+iOS,5,3,iOS,iOS,iOS,iOS,MacOS,5,1,iOS,Either/Doesn't Matter
+Android,3,3,iOS,Android,iOS,iOS,MacOS,4,4,iOS,Windows
+iOS,4,2,iOS,iOS,Android,iOS,MacOS,4,1,Other,Mac OS
+iOS,3,2,iOS,iOS,iOS,iOS,Other,3,1,iOS,Windows
+iOS,4,3,iOS,iOS,iOS,iOS,MacOS,3,1,iOS,Either/Doesn't Matter
+Android,3,2,Android,Android,Android,iOS,MacOS,5,3,iOS,Either/Doesn't Matter
+iOS,4,2,iOS,iOS,iOS,iOS,MacOS,5,2,iOS,Windows
+Android,5,2,Android,Android,Android,iOS,MacOS,5,5,iOS,Either/Doesn't Matter
+iOS,4,3,iOS,iOS,iOS,iOS,MacOS,4,3,iOS,Mac OS
+iOS,4,2,iOS,iOS,Android,iOS,MacOS,5,1,iOS,Mac OS
+Android,4,2,Android,Android,Android,Android,Windows,4,4,iOS,Don't use PC at work/study
+iOS,4,2,iOS,iOS,iOS,iOS,MacOS,4,4,iOS,Either/Doesn't Matter
+Android,5,1,Android,Android,Android,iOS,Windows,4,2,Android,Either/Doesn't Matter
+Android,5,2,Android,Android,Android,Other,MacOS,5,5,iOS,Either/Doesn't Matter
+Android,5,1,Android,Android,Android,iOS,Windows,4,3,Android,Either/Doesn't Matter
+iOS,5,1,iOS,iOS,iOS,iOS,Windows,4,1,iOS,Either/Doesn't Matter
+Android,2,3,Didn’t have a smartphone before,Android,iOS,Android,Windows,3,1,Other,Windows
+iOS,3,4,iOS,iOS,iOS,iOS,Windows,3,1,iOS,Windows
+Android,3,1,Android,Android,Android,Android,Windows,3,1,Other,Windows
+iOS,5,2,iOS,iOS,Other,iOS,MacOS,5,2,iOS,Either/Doesn't Matter
+Android,5,1,iOS,Android,iOS,iOS,Windows,5,1,Other,Windows
+iOS,5,1,iOS,iOS,iOS,iOS,MacOS,5,1,Other,Mac OS
+iOS,5,4,iOS,Android,Android,iOS,MacOS,4,1,iOS,Either/Doesn't Matter
+iOS,3,1,Android,Android,iOS,iOS,Windows,4,1,Android,Windows
+iOS,4,2,iOS,iOS,iOS,iOS,MacOS,5,1,Other,Either/Doesn't Matter
+iOS,5,1,iOS,iOS,iOS,iOS,MacOS,4,1,iOS,Windows
+iOS,5,3,Android,iOS,iOS,iOS,Windows,4,1,iOS,Either/Doesn't Matter
