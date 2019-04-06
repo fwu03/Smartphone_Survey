@@ -1,0 +1,191 @@
+---
+title: "EDA"
+output: github_document
+---
+
+```{r include=FALSE}
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(broom))
+suppressPackageStartupMessages(library(ggthemes))
+```
+
+# An investigation into the relationship between peoples smartphone choices and their laptop choices.
+
+## Background
+
+The smartphone operating system industry is dominated by iOS and Android and the laptop operating system industry is dominated by Mac OS and Windows (also Linux, but for the purposes of this investigation it falls under 'Other'), we want to see if having there is any relation between the phones that people own and their PC operating system choices. 
+
+Our hypothesis is that the choice of phone will influence the choice of laptop in the individuals. For example, people with an iPhone will have a non-negligible preference for purchasing/owning a Mac, and people with an Android will edge towards a Windows or Linux OS.
+
+## Reading the data
+
+```{r echo=FALSE,include=FALSE}
+smart_survey <- read_csv("../../stats/data/smartphone_clean.csv")
+```
+
+We asked our respondents a series of questions related to their smartphones and PCs that included their level of satisfaction and the type of OS required at the work. The columns are outlined below
+
+- **smartphone_OS**: The type of smartphone that they currently own
+- **num_smartphone_OS**: Level of satisfaction with smartphone
+- **smartphone_OS_years**: Number of years they've owned the smartphone
+- **pre_smartphone_OS**: The smartphone that was owned before the current one
+- **future_smartphone_OS**: The smartphone they would purchase today if they had the choice
+- **family_smartphone_OS**: The smartphone OS that is most common amongst their family
+- **friend_smartphone_OS**: The smartphone OS that is most common amongst their friends
+- **PC_OS**: The PC/Laptop operating system they are currently running
+- **num_PC_OS**: Level of satisfaction with PC
+- **PC_OS_years**: How long they've owned their current laptop/PC
+- **future_PC_OS**: The PC/Laptop OS they would purchase today if they had the choice
+- **workplace_PC_OS**: The PC/Laptop OS that is required by their workplace
+
+Below, we show a snippet of the first six rows of our data, that is read into our analysis pipeline.
+
+```{r echo=FALSE}
+kable(head(smart_survey))
+```
+
+## Exploratory Analysis
+
+First, let's create some summary tables of the responses to see what kind of a spread we've got.
+
+#### Smartphone OS counts
+
+```{r echo=FALSE}
+smart_survey %>%
+  group_by(smartphone_OS) %>%
+  summarize(n()) %>%
+  kable(col.names = c("Smartphone OS","Count"))
+```
+
+#### Laptop OS Counts
+
+```{r echo=FALSE}
+smart_survey %>%
+  group_by(PC_OS) %>%
+  summarize(n()) %>%
+  kable(col.names = c("PC OS","Count"))
+```
+
+Now, we decided to look at the **number of combinations between smartphone and PC OS**
+
+```{r echo=FALSE}
+smart_survey %>%
+  group_by(smartphone_OS,PC_OS) %>%
+  summarize(n()) %>%
+  kable(col.names = c("Smartphone OS","PC OS","Count"))
+```
+
+#### Smartphones
+
+Let's take a closer look at the Smartphones category
+
+```{r echo=FALSE}
+smart_survey %>%
+  ggplot(aes(x=smartphone_OS,fill=smartphone_OS)) +
+  geom_bar() +
+  xlab("") +
+  ylab("") +
+  ggtitle("Smartphone OS")+
+  theme(legend.position = "none")
+```
+
+Looking at the level of satisfaction that iOS users reported
+
+```{r echo=FALSE}
+smart_survey %>%
+  filter(smartphone_OS=="iOS") %>%
+  ggplot(aes(x=num_smartphone_OS)) +
+  geom_bar() +
+  ggtitle("Level of satisfaction of iOS users") +
+  ylab("") +
+  xlab("") +
+  expand_limits(x=1) 
+```
+
+And the level of satisfaction that Android users reported
+
+```{r echo=FALSE}
+smart_survey %>%
+  filter(smartphone_OS=="Android") %>%
+  ggplot(aes(x=num_smartphone_OS)) +
+  geom_bar() +
+  ggtitle("Level of satisfaction of Android users") +
+  ylab("") +
+  xlab("") +
+  expand_limits(x=1)
+```
+
+There appears to be a little more dissatisfaction with their current smartphone OS amongst the Android group. The iOS group on the other hand is robust with their satisfaction with their phones OS; with almost all responses in the 4 or 5 range.
+
+Let's see if this translates into what future phones they might purchase.
+
+```{r echo =FALSE}
+smart_survey %>%
+  ggplot(aes(x=future_smartphone_OS,fill=future_smartphone_OS)) +
+  geom_bar() +
+  xlab("") +
+  ylab("") +
+  ggtitle("Future choice of Smartphone OS")+
+  theme(legend.position = "none")
+```
+
+Interestingly enough, Android saw a slight increase in the desired smartphone OS category compared to iOS.
+
+#### Laptop OS
+
+Now let's take a closer look at the Laptop OS category
+
+```{r echo=FALSE}
+smart_survey %>%
+  ggplot(aes(x=PC_OS)) +
+  geom_bar() +
+  xlab("") +
+  ylab("") +
+  ggtitle("Current Laptop OS")+
+  theme(legend.position = "none")
+```
+
+Looking at the level of satisfaction that MacOS users reported out of five,
+
+```{r echo =FALSE}
+smart_survey %>%
+  filter(PC_OS=="MacOS") %>%
+  ggplot(aes(x=num_PC_OS)) +
+  geom_bar() +
+  ggtitle("Level of satisfaction of MacOS users") +
+  ylab("") +
+  xlab("") +
+  expand_limits(x=1)
+```
+
+And the level of satisfaction reported by Windows users
+
+```{r echo=FALSE}
+smart_survey %>%
+  filter(PC_OS=="Windows") %>%
+  ggplot(aes(x=num_PC_OS)) +
+  geom_bar() +
+  ggtitle("Level of satisfaction of Windows users") +
+  ylab("") +
+  xlab("") +
+  expand_limits(x=1)
+```
+
+Similarly to the Android group above, the Windows group shows a little bit of a lower satisfaction overall with their current OS than the MacOS group.
+
+#### Combinations of Smartphone,Laptop OS
+
+Finally, looking at a bin2d graph of the current smartphone platforms vs. the current laptop platforms.
+
+```{r echo=FALSE}
+smart_survey %>%
+  filter(PC_OS %in% c("Windows","MacOS")) %>%
+  ggplot(aes(x=PC_OS,y=smartphone_OS)) +
+  geom_bin2d() +
+  ylab("Smartphone OS") +
+  xlab("Laptop OS")
+```
+
+Clearly as the iOS, MacOS syndicate is the most represented, it is the lightest on the graph. Our outliers, the cross-platform users, are poorly represented amongst this sample, but still non-negligible.
