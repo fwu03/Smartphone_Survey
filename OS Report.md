@@ -1,6 +1,3 @@
-EDA
-================
-
 # An investigation into the relationship between peoples smartphone choices and their laptop choices.
 
 ## Background
@@ -15,6 +12,10 @@ Our hypothesis is that the choice of phone will influence the choice of
 laptop in the individuals. For example, people with an iPhone will have
 a non-negligible preference for purchasing/owning a Mac, and people with
 an Android will edge towards a Windows or Linux OS.
+
+## Survey
+
+Online Survey Link: https://form.simplesurvey.com/f/s.aspx?s=ab0d4727-1bfa-492b-a658-603160a2d84f&lang=EN
 
 ## Reading the data
 
