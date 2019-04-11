@@ -12,7 +12,8 @@
 ## Milestone
 |Milestone|Description|
 |--|--|
-|Milestone 1|[Proposal](../master/Proposal.md)|
+|Milestone 1|[Proposal](../master/doc/Proposal.md)|
+|Milestone 2|[EDA](../master/doc/Milestone2_EDA.md)|
 
 
 ## Research Question
