@@ -181,7 +181,7 @@ for
 With a sample size of 27, the Pearson’s Chi-squared test of independance
 show that there is no significant association between the smartphone
 choices and laptop preferences with a p-value of 0.1463. The test
-statistic was 3.8435 with 2 degree of freedom. Base on the contgency
+statistic was 3.8435 with 2 degree of freedom. Base on the contingency
 table, we see that there is 17 iOS user vs 10 android user. Also, there
 is 16 MacOS user vs 10 Windows user, and 1 user wih an alternative
 computer operating system.
