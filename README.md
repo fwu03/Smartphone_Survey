@@ -14,6 +14,7 @@
 |--|--|
 |Milestone 1|[Proposal](../master/doc/Proposal.md)|
 |Milestone 2|[EDA](../master/doc/Milestone2_EDA.md)|
+|Milistone 3|[Report](../master/doc/Milestone3_Report.md)|
 
 
 ## Research Question
