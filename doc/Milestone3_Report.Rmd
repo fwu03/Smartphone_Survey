@@ -229,6 +229,11 @@ Contingency table for
 (chisq <- chisq.test(Contingency_smartphone))
 ```
 
+## Result
+Based on the statistical analysis, we observed that:
+
+With a sample size of 27, the Pearson's Chi-squared test of independance show that there is no significant association between the smartphone choices and laptop preferences with a p-value of 0.1463. The test statistic was 3.8435 with 2 degree of freedom. Base on the contgency table, we see that there is 17 iOS user vs 10 android user. Also, there is 16 MacOS user vs 10 Windows user, and 1 user wih an alternative computer operating system.
+
 ## Conclusion
 Based on the visualizations above, we observed that:
 
@@ -237,11 +242,6 @@ Based on the visualizations above, we observed that:
 3.	Interestingly, seems like some iOS users are willing to switch to Android in the future.
 4.	For laptop operating system, the Windows users show a little bit of a lower satisfaction overall with their current operation system than the MacOS group.
 5.	Just based on the survey results, the combination of iOS smartphone and MacOS laptop is the most represented.
-
-Based on the statistical analysis, we observed that:
-
-With a sample size of 27, the Pearson's Chi-squared test of independance show that there is no significant association between the smartphone choices and laptop preferences with a p-value of 0.1463. The test statistic was 3.8435 with 2 degree of freedom. Base on the contgency table, we see that there is 17 iOS user vs 10 android user. Also, there is 16 MacOS user vs 10 Windows user, and 1 user wih an alternative computer operating system. 
-
 
 ## Limitations
 The survey still has a number of limitations that we can improve in the future: 
