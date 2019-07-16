@@ -1,5 +1,5 @@
 ---
-title: "EDA"
+title: "Milestone2 - EDA"
 output: github_document
 ---
 
@@ -11,7 +11,7 @@ suppressPackageStartupMessages(library(broom))
 suppressPackageStartupMessages(library(ggthemes))
 ```
 
-# An investigation into the relationship between peoples smartphone choices and their laptop choices.
+# An investigation on the association betwen peoples smartphone choices and their laptop preferences
 
 ## Background
 
@@ -19,10 +19,14 @@ The smartphone operating system industry is dominated by iOS and Android and the
 
 Our hypothesis is that the choice of phone will influence the choice of laptop in the individuals. For example, people with an iPhone will have a non-negligible preference for purchasing/owning a Mac, and people with an Android will edge towards a Windows or Linux OS.
 
+## Survey
+
+Online Survey Link: https://form.simplesurvey.com/f/s.aspx?s=ab0d4727-1bfa-492b-a658-603160a2d84f&lang=EN
+
 ## Reading the data
 
 ```{r echo=FALSE,include=FALSE}
-smart_survey <- read_csv("../../stats/data/smartphone_clean.csv")
+smart_survey <- read.csv("smartphone_clean.csv")
 ```
 
 We asked our respondents a series of questions related to their smartphones and PCs that included their level of satisfaction and the type of OS required at the work. The columns are outlined below
@@ -189,3 +193,25 @@ smart_survey %>%
 ```
 
 Clearly as the iOS, MacOS syndicate is the most represented, it is the lightest on the graph. Our outliers, the cross-platform users, are poorly represented amongst this sample, but still non-negligible.
+
+
+## Statistical Analysis
+
+Contingency table for 
+
+```{r}
+(Contingency_smartphone<-table(smart_survey$smartphone_OS,smart_survey$PC_OS))
+```
+
+```{r}
+(chisq <- chisq.test(Contingency_smartphone))
+```
+
+## Results
+
+With a sample size of 27, the Pearson's Chi-squared test of independance show that there is no significant association between the smartphone choices and laptop preferences with a p-value of 0.1463. The test statistic was 3.8435 with 2 degree of freedom. Base on the contgency table, we see that there is 17 iOS user vs 10 android user. Also, there is 16 MacOS user vs 10 Windows user, and 1 user wih an alternative computer operating system. 
+
+
+## Discussion 
+
+Base on the results, we see that there is no association between choice of smartphone os and that of laptop OS. While the test is not significant With a p-value of 0.1463, the result could be more meaning full if we can increase the sample size in the future. The sample size is a big factor in the chi-square test of independance. Also, the sampling frame was restricted to the MDS cohort, thus, it might not be a good representation of the population. 

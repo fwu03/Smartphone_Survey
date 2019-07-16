@@ -1,4 +1,7 @@
-# An investigation into the relationship between peoples smartphone choices and their laptop choices.
+Milestone2 - EDA
+================
+
+# An investigation on the association betwen peoples smartphone choices and their laptop preferences
 
 ## Background
 
@@ -15,7 +18,8 @@ an Android will edge towards a Windows or Linux OS.
 
 ## Survey
 
-Online Survey Link: https://form.simplesurvey.com/f/s.aspx?s=ab0d4727-1bfa-492b-a658-603160a2d84f&lang=EN
+Online Survey Link:
+<https://form.simplesurvey.com/f/s.aspx?s=ab0d4727-1bfa-492b-a658-603160a2d84f&lang=EN>
 
 ## Reading the data
 
@@ -92,15 +96,15 @@ smartphone and PC OS**
 
 Let’s take a closer look at the Smartphones category
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 Looking at the level of satisfaction that iOS users reported
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 And the level of satisfaction that Android users reported
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 There appears to be a little more dissatisfaction with their current
 smartphone OS amongst the Android group. The iOS group on the other hand
@@ -110,7 +114,7 @@ responses in the 4 or 5 range.
 Let’s see if this translates into what future phones they might
 purchase.
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Interestingly enough, Android saw a slight increase in the desired
 smartphone OS category compared to iOS.
@@ -119,16 +123,16 @@ smartphone OS category compared to iOS.
 
 Now let’s take a closer look at the Laptop OS category
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 Looking at the level of satisfaction that MacOS users reported out of
 five,
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 And the level of satisfaction reported by Windows users
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Similarly to the Android group above, the Windows group shows a little
 bit of a lower satisfaction overall with their current OS than the MacOS
@@ -139,8 +143,55 @@ group.
 Finally, looking at a bin2d graph of the current smartphone platforms
 vs. the current laptop platforms.
 
-![](eda_viz_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](Milestone2_EDA_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 Clearly as the iOS, MacOS syndicate is the most represented, it is the
 lightest on the graph. Our outliers, the cross-platform users, are
 poorly represented amongst this sample, but still non-negligible.
+
+## Statistical Analysis
+
+Contingency table
+for
+
+``` r
+(Contingency_smartphone<-table(smart_survey$smartphone_OS,smart_survey$PC_OS))
+```
+
+    ##          
+    ##           MacOS Other Windows
+    ##   Android     4     0       6
+    ##   iOS        12     1       4
+
+``` r
+(chisq <- chisq.test(Contingency_smartphone))
+```
+
+    ## Warning in chisq.test(Contingency_smartphone): Chi-squared approximation
+    ## may be incorrect
+
+    ## 
+    ##  Pearson's Chi-squared test
+    ## 
+    ## data:  Contingency_smartphone
+    ## X-squared = 3.8435, df = 2, p-value = 0.1463
+
+## Results
+
+With a sample size of 27, the Pearson’s Chi-squared test of independance
+show that there is no significant association between the smartphone
+choices and laptop preferences with a p-value of 0.1463. The test
+statistic was 3.8435 with 2 degree of freedom. Base on the contingency
+table, we see that there is 17 iOS user vs 10 android user. Also, there
+is 16 MacOS user vs 10 Windows user, and 1 user wih an alternative
+computer operating system.
+
+## Discussion
+
+Base on the results, we see that there is no association between choice
+of smartphone os and that of laptop OS. While the test is not
+significant With a p-value of 0.1463, the result could be more meaning
+full if we can increase the sample size in the future. The sample size
+is a big factor in the chi-square test of independance. Also, the
+sampling frame was restricted to the MDS cohort, thus, it might not be a
+good representation of the population.
